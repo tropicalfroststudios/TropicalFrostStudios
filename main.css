@@ -123,12 +123,6 @@ body{
     transform: translateY(14px);
 }
 
-.main li:hover:after{
-    width:100%;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
 .main li::before{
     content:"";
     display:flex;
@@ -142,17 +136,10 @@ body{
     transform: translateY(-14px);
 }
 
-.main li:hover:before{
+.main li{
     width:100%;
-    cursor: pointer;
-    transition: 0.7s;
-} 
-
-
-.main li:hover{
-    cursor: pointer;
-    background: #D5E8F2;
-    transition: 0.7s;
+    height:100%;
+    background:#0ff;
 }
 
 .comm{
@@ -363,6 +350,67 @@ body{
     }
 }
 
+@media (hover: hover) {
+    .main li:hover:after{
+        width:100%;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .main li:hover:before{
+        width:100%;
+        cursor: pointer;
+        transition: 0.7s;
+    } 
+    .main li:hover{
+        cursor: pointer;
+        background: #D5E8F2;
+        transition: 0.7s;
+    }
+    .works:hover{
+        cursor: pointer;
+        transform: scale(1.05);
+        transition: 0.3s;
+    }
+    .works:hover{
+        cursor: pointer;
+        transform: scale(1.05);
+        transition: 0.3s;
+    }
+    .works:hover:after{
+        width:100%;
+        transition: 0.3s;
+    }
+}
+.main li:active:after{
+    width:100%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.main li:active:before{
+    width:100%;
+    cursor: pointer;
+    transition: 0.3s;
+} 
+.main li:active{
+    cursor: pointer;
+    background: #D5E8F2;
+    transition: 0.3s;
+}
+.works:active{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+.works:active{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+.works:active:after{
+    width:100%;
+    transition: 0.3s;
+}
+
 @media only screen and (max-width: 650px) {
     .secondmain{
         transform: scale(0.7);
@@ -397,14 +445,7 @@ body{
         position: static;
         transform: translateY(0px);
     }
-
-    .main li:hover:after{
-        width:100%;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-
-        .main li::before{
+    .main li::before{
         display:none;
     }
 
@@ -615,7 +656,7 @@ body{
     height:100vh;
     text-align:center;
     position:relative;
-    transform: translateX(-38px);
+    transform: translateX(-40px);
     min-height:800px;
 }
 
@@ -693,17 +734,20 @@ body{
 
 #works{
     display:flex;
-    justify-items: start;
     justify-content: center;
-    width:100vw;
-    overflow-x: hidden;
+    width:100vw !important;
+    overflow-x: hidden !important;
 }
 
 .work{
-    font-size:30vw;
+    font-size:35vw;
     position: absolute;
-    top:125vh;
+    top:130vh;
     color: #371B29;
+    overflow: hidden;
+    transform: translateX(-5vw);
+    width:calc(108vw + 2px);
+    overflow: hidden;
 }
 .works{
     font-size:calc(2vw + 15px);
@@ -712,11 +756,6 @@ body{
     background: #B7504B;
     color:white;
     padding:1vh 2vw;
-    transition: 0.3s;
-}
-.works:hover{
-    cursor: pointer;
-    transform: scale(1.05);
     transition: 0.3s;
 }
 
@@ -728,10 +767,5 @@ body{
     background:white;
     margin:auto;
     position: static;
-    transition: 0.3s;
-}
-
-.works:hover:after{
-    width:100%;
     transition: 0.3s;
 }
