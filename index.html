@@ -3,36 +3,68 @@
     <head>
         <title>Tropical Frost Studios</title>
         <link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 <body>
-    <div id="header">
-        <header>
-            <img src="background.png" class="background">
-            <div class="logo"><a href="home"><img src="logo.png" class="logo" href="home.html"></a> </div>
-            <div class="main">
-                <ul class="inside">
-                    <li><a href="aboutus">Completed Work</a></li>
-                    <li><a href="priceandpackage">Pricing and Package</a></li>
-                    <li><a href="socials">Socials</a></li>
-                    <li><a href="termsandconditions">Terms and Conditions</a></li>
-                </ul>
+    <div id="container">
+        <div id="intro">
+            <div id="header">
+                <header>
+                    <img src="background.png" class="background">
+                    <div class="logo"><a href="home"><img src="logo.png"href="home.html"></a> </div>
+                    <div class="main">
+                        <ul class="inside">
+                            <li><a href="#works">Completed Work</a></li>
+                            <li><a href="#packages">Packages</a></li>
+                            <li><a href="#socials">Socials</a></li>
+                            <li><a href="#termsandconditions">FAQ & Terms</a></li>
+                        </ul>
+                    </div>
+                </header>
             </div>
-        </header>
-    </div>
-    <div class="space"></div>
-    <div class="comm">
-        <div>
-            <h1>COMMISION STATUS</h1>
-            <div class="countdown">
-                <h2>3</h2>
-                <h2>2</h2>
-                <h2>1</h2>
-                <h2>OPEN</h2>
-            </div>
-            <div class="offer">
-                <h3>*3 more slots until Febuary!</h3>
+            <div class="comm">
+                <div class="stat"><h1>COMMISION STATUS</h1></div>
+                <div class="countdown">
+                    <h2>3</h2>
+                    <h2>2</h2>
+                    <h2>1</h2>
+                    <h2>OPEN</h2>
+                </div>
+                <div class="offer">
+                    <h3>*3 more slots until Febuary!</h3>
+                </div>
             </div>
         </div>
+        <div id="works">
+            <h1 class="work">WORKS</h1>
+            <div class="secondmain">
+                <div class="banner">
+                    <div class="slider" id="mainSlider" style="--quantity: 4; --rotation: 0deg;">
+                        <div class="item" style="--position: 1"><img src="background.png"></div>
+                        <div class="item" style="--position: 2"><img src="background.png"></div>
+                        <div class="item" style="--position: 3"><img src="background.png"></div>
+                        <div class="item" style="--position: 4"><img src="background.png"></div>
+                        <div class="item2" style="--position: 5"></div>
+                        <div class="item2" style="--position: 6"></div>
+                        <div class="item2" style="--position: 7"></div>
+                        <div class="item2" style="--position: 8"></div>
+                        <div class="item3" style="--position: 9"><div class="text"></div></div>
+                        <div class="item3" style="--position: 10"><div class="text"></div></div>
+                        <div class="item3" style="--position: 11"><div class="text"></div></div>
+                        <div class="item3" style="--position: 12"><div class="text"></div></div>
+                    </div>
+                </div>
+                <div class="nav-buttons">
+                        <button onclick="rotateSlider(-90)">➡</button>
+                        <button onclick="rotateSlider(90)">➡</button>
+                </div>
+            </div>
+            <a href="works.html" class="works">MORE</a>
+        </div>
+        <div id="packages"></div>
+        <div id="socials"></div>
+        <div id="termsandconditions"></div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
