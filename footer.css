@@ -1,0 +1,344 @@
+*{
+    padding:0;
+    margin:0;
+    list-style:none;
+    text-decoration: none;
+    color:#16163b;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#termsandconditions li .fa-x-twitter{
+    background:#000000;
+    color:#ffffff;
+    border:#ffffff 2px solid;
+}
+
+#termsandconditions li .fa-youtube{
+    background:black;
+    color:#F80400;
+    border:#F80400 2px solid;
+}
+
+#termsandconditions li .fa-instagram{
+    background:black;
+    color:#FF1788;
+    border:#FF1788 2px solid;
+}
+
+#termsandconditions li .fa-tiktok{
+    background:black;
+    color:#ffffff;
+    border:#ffffff 2px solid;
+}
+
+#termsandconditions li .fa-facebook{
+    background:black;
+    color:#107AF2;
+    border:#107AF2 2px solid;
+}
+
+#termsandconditions li .fa-telegram{
+    background:black;
+    color:#039CD8;
+    border:#039CD8 2px solid;
+}
+
+#termsandconditions li .fa-pinterest{
+    background:black;
+    color:#FB0200;
+    border:#FB0200 2px solid;
+}
+
+#termsandconditions li .fa-discord{
+    background:black;
+    color:#5865F2;
+    border:#5865F2 2px solid;
+}
+
+#termsandconditions li .fa-brands:active{
+    transform: scale(1.08);
+}
+
+#termsandconditions li .fa-youtube:active{
+    border:#F80400 2px solid;
+    box-shadow: 0px 0px 5px #8f0300;
+    text-shadow: 0px 0px 3px #8f0300;
+}
+
+#termsandconditions li .fa-instagram:active{
+    border:#FF1788 2px solid;
+    box-shadow: 0px 0px 5px #990d51;
+    text-shadow: 0px 0px 3px #990d51;
+}
+
+#termsandconditions li .fa-tiktok:active{
+    border:#b9f0ff 2px solid;
+    box-shadow: 0px 0px 5px #7f9da5;
+    text-shadow: 0px 0px 3px #799ca5;
+}
+
+#termsandconditions li .fa-facebook:active{
+    border:#107AF2 2px solid;
+    box-shadow: 0px 0px 5px #0b51a0;
+    text-shadow: 0px 0px 3px #0b51a0;
+}
+
+#termsandconditions li .fa-telegram:active{
+    border:#039CD8 2px solid;
+    box-shadow: 0px 0px 5px #036891;
+    text-shadow: 0px 0px 3px #036891;
+}
+
+#termsandconditions li .fa-pinterest:active{
+    border:#FB0200 2px solid;
+    box-shadow: 0px 0px 5px #a00000;
+    text-shadow: 0px 0px 3px #a00000;
+}
+
+#termsandconditions li .fa-x-discord:active{
+    border:#ffffff 2px solid;
+    box-shadow: 0px 0px 5px #5865F2;
+    text-shadow: 0px 0px 3px #5865F2;
+}
+
+@media (hover: hover) {
+    #termsandconditions li .fa-brands:hover{
+        transform: scale(1.08);
+    }
+
+    #termsandconditions li .fa-youtube:hover{
+        border:#F80400 2px solid;
+        box-shadow: 0px 0px 5px #8f0300;
+        text-shadow: 0px 0px 3px #8f0300;
+    }
+
+    #termsandconditions li .fa-instagram:hover{
+        border:#FF1788 2px solid;
+        box-shadow: 0px 0px 5px #990d51;
+        text-shadow: 0px 0px 3px #990d51;
+    }
+
+    #termsandconditions li .fa-tiktok:hover{
+        border:#b9f0ff 2px solid;
+        box-shadow: 0px 0px 5px #7f9da5;
+        text-shadow: 0px 0px 3px #799ca5;
+    }
+
+    #termsandconditions li .fa-facebook:hover{
+        border:#107AF2 2px solid;
+        box-shadow: 0px 0px 5px #0b51a0;
+        text-shadow: 0px 0px 3px #0b51a0;
+    }
+
+    #termsandconditions li .fa-telegram:hover{
+        border:#039CD8 2px solid;
+        box-shadow: 0px 0px 5px #036891;
+        text-shadow: 0px 0px 3px #036891;
+    }
+
+    #termsandconditions li .fa-pinterest:hover{
+        border:#FB0200 2px solid;
+        box-shadow: 0px 0px 5px #a00000;
+        text-shadow: 0px 0px 3px #a00000;
+    }
+
+    #termsandconditions li .fa-x-twitter:hover{
+        border:#ffffff 2px solid;
+        box-shadow: 0px 0px 5px #9e9e9e;
+        text-shadow: 0px 0px 3px #9e9e9e;
+    }
+    #termsandconditions li .fa-x-discord:hover{
+        border:#ffffff 2px solid;
+        box-shadow: 0px 0px 5px #5865F2;
+        text-shadow: 0px 0px 3px #5865F2;
+    }
+}
+
+#termsandconditions .content{
+    height:60vh;
+    width:100%;
+}
+
+#termsandconditions footer{
+    height:calc(50vh - 15px);
+    width:100%;
+    background:#333;
+    padding-top: 15px;
+}
+
+#termsandconditions li .fa-brands{
+    background:black;
+    font-size:25px;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    width:35px;
+    height:35px;
+    border-radius: 100px;
+    transition:.3s;
+}
+
+footer ul{
+    display:flex;
+    width: 80vw;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:200px;
+}
+
+footer .findus{
+    width:min-content;
+}
+
+footer{
+    display:flex;
+    flex-wrap: wrap;
+    width:100vw;
+    justify-content: space-around;
+    animation: footer1;
+    transform: translateY(-100%);
+    animation-timeline: scroll();
+}
+
+footer .findus h1{
+    display: none;
+}
+
+#termsandconditions{
+    max-width:100vw;
+    max-height: 100vh;
+}
+
+footer .about h2{
+    font-size: 18px;
+    color:white;
+}
+
+.about h6{
+    font-size:14px;
+    color:white;
+}
+
+footer .about p{
+    color:rgb(218, 218, 218);
+    text-align: left;
+    width:85vw;
+    font-size:12px;
+    height:fit-content;
+    padding-bottom: 10px;
+}
+
+footer  .copyright{
+    color:white;
+    width:85vw;
+    font-size: 11px;
+    text-align: center;
+}
+
+.about{
+    padding-bottom: 10px;
+    max-height: min-content;
+}
+
+@media only screen and (min-width: 1010px) {
+    #termsandconditions .content{
+        height:60vh !important;
+    }
+
+    #termsandconditions footer{
+        height: 40vh;
+    }
+
+    footer ul{
+        width:fit-content;
+        flex-wrap: no-wrap;
+        gap: 20px;
+        width:500px;
+    }
+
+    footer .findus{
+        height:35%;
+        width:min-content;
+        transform: translateX(-75px);
+    }
+
+    footer .findus h1{
+        display: block;
+    }
+    footer .about p{
+        width:400px;
+        height:fit-content;
+        font-size:16px;
+        padding: 0 0 10px 0;
+    }
+
+    footer .copyright{
+        transform: translateY(-12px);
+    }
+
+    footer h1{
+        color:rgb(255, 255, 255);
+        font-size:25px;
+        width:100%;
+        text-align: center;
+        padding-bottom: 20px;
+        display: block;
+    }
+
+    footer{
+        height:calc(40vh) !important;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    #termsandconditions li .fa-brands{
+        font-size:25px;
+        width:40px;
+        height:40px;
+        border-radius: 100px;
+    }
+    #termsandconditions .content{
+        height:60vh;
+    }
+
+    #termsandconditions footer{
+        height:40vh;
+    }
+    .about h6{
+        font-size:16px;
+    }
+
+    footer .about h2{
+        font-size: 25px;
+        padding: 0 0 10px 0;
+    }
+    footer .about p{
+        height:fit-content;
+        font-size:16px;
+        padding: 0 0 10px 0;
+    }
+
+    footer .copyright{
+        font-size: 14px;
+        max-height: fit-content;
+    }
+    footer ul{
+        width:fit-content;
+        gap: 20px;
+        width:500px;
+    }
+}
+
+@keyframes footer1{
+    0%{
+        transform: translateY(100%);
+    }
+    85%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}

@@ -3,6 +3,8 @@
     margin:0;
     list-style:none;
     text-decoration: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     color:#16163b;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -14,6 +16,7 @@ html {
 body{
     background:#b9f0ff;
     overflow-x: hidden;
+    height:600vh !important;
     animation: color1;
     animation-timeline: scroll();
 }
@@ -27,7 +30,6 @@ body{
     position: absolute;
     width:100vw;
     opacity:0.7 !important;
-    background: #ffffff8f;
 }
 
 #header header{
@@ -55,6 +57,9 @@ body{
 
 .logo img{
     width:90vw;
+    max-width:90vw;
+    max-height: 20vw;
+    object-fit: scale-down;
     filter: drop-shadow(0px 0px 10px rgba(40, 248, 255, 0.329));
 }
 
@@ -219,7 +224,10 @@ body{
 
 #intro, #works, #packages, #socials, #termsandconditions{
     min-height:100vh;
-    scroll-snap-align: start;
+}
+
+#socials{
+    height:200vh;
 }
 
 @keyframes leftin {
@@ -251,17 +259,20 @@ body{
     0%{
         background:#b9f0ff;
     }
-    25%{
+    20%{
         background: #fcdcb3;
     }
-    50%{
-        background:#b9f0ff;
+    40%{
+        background: #b9f0ff;
     }
-    75%{
-        background: #fcdcb3;
+    60%{
+        background:#fcdcb3;
+    }
+    80%{
+        background: #b9f0ff;
     }
     100%{
-        background:#b9f0ff;
+        background:#fcdcb3;
     }
 }
 
@@ -456,6 +467,7 @@ body{
         height: calc(2vh + 36px);
         font-size: calc((2vh + 36px)/2.5);
     }
+    
 }
 
 @media only screen and (min-width: 1025px) {
@@ -787,19 +799,19 @@ body{
         transform: scale(0) translateY(-80vh) translateX(-10vw);
         opacity:0;
     }
-    18%{
+    14%{
         transform: scale(0) translateY(-80vh) translateX(-10vw);
         opacity:0;
     }
-    23%{
+    19%{
         transform: scale(1) translateY(0) translateX(-5vw);
         opacity:1;
     }
-    33%{
+    29%{
         transform: scale(1) translateY(0) translateX(-5vw);
         opacity:1;
     }
-    43%{
+    39%{
         transform: scale(0) translateY(0) translateX(-5vw);
         opacity:0;
     }
@@ -814,19 +826,19 @@ body{
         transform: scale(0) translateY(-40vh);
         opacity:0;
     }
-    13%{
+    10%{
         transform: scale(0) translateY(-40vh);
         opacity:0;
     }
-    23%{
+    20%{
         transform: scale(1) translateY(80vh);
         opacity:1;
     }
-    33%{
+    30%{
         transform: scale(1) translateY(80vh);
         opacity:1;
     }
-    43%{
+    40%{
         transform: scale(0) translateY(80vh);
         opacity:0;
     }
@@ -841,19 +853,19 @@ body{
         transform: scale(0) translateY(-40vh);
         opacity:0;
     }
-    10%{
+    5%{
         transform: scale(0.5) translateY(-40vh);
         opacity:0;
     }
-    25%{
+    10%{
         transform: scale(1) translateY(0px);
         opacity:1;
     }
-    35%{
+    20%{
         transform: scale(1) translateY(0px);
         opacity:1;
     }
-    50%{
+    30%{
         transform: scale(0) translateY(0px);
         opacity:0;
     }
@@ -863,65 +875,757 @@ body{
     }
 }
 
-@media only screen and (max-width: 500px) {
-    @keyframes work1{
-        0%{
-            transform: scale(0) translateY(-40vh) translateX(-3vw);
-            opacity:0;
-        }
-        10%{
-            transform: scale(0) translateY(-40vh) translateX(-3vw);
-            opacity:0;
-        }
-        25%{
-            transform: scale(1.2) translateY(0) translateX(-3vw);
-            opacity:1;
-        }
-        30%{
-            transform: scale(1.2) translateY(0) translateX(-3vw);
-            opacity:1;
-        }
-        40%{
-            transform: scale(0) translateY(0) translateX(-3vw);
-            opacity:0;
-        }
-        100%{
-            transform: scale(0) translateY(0) translateX(-3vw);
-            opacity:0;
-        }
+/*********************************************************************/
+
+.form{
+    height:200vh;
+    width:100vw;
+    display:flex;
+    position: absolute;
+    justify-content: center;
+    z-index:999;
+    align-items:center;
+    animation:form1;
+    animation-timeline:scroll();
+    transform: translateY(30vh);
+}
+
+@keyframes form1{
+    0%{
+        transform: translateY(40vh)
     }
-    @keyframes work2{
-        0%{
-            transform: scale(0) translateY(90vh);
-            opacity:0;
-        }
-        10%{
-            transform: scale(0) translateY(90vh);
-            opacity:0;
-        }
-        25%{
-            transform: scale(1) translateY(90vh);
-            opacity:1;
-            z-index:-1;
-        }
-        30%{
-            transform: scale(1) translateY(90vh);
-            opacity:1;
-            z-index:1;
-        }
-        40%{
-            transform: scale(0) translateY(90vh);
-            opacity:0;
-        }
-        100%{
-            transform: scale(0) translateY(90vh);
-            opacity:0;
-        }
+    60%{
+        transform: translateY(40vh)
+    }
+    80%{
+        transform: translateY(-40vh)
+    }
+    100%{
+        transform: translateY(-40vh)
     }
 }
 
+input[type=text], input[type=email]{
+    font-size:11px;
+    padding:1px 5px;
+    background:#ffffff9f;
+    caret-color:black;
+    font-family: sans-serif;
+}
 
-@media only screen and (max-height: 750px) and (max-height: 750px){
+form{
+    width:75vw;
+    padding:35px 7vw;
+    border-radius: 25px;
+    display: inline-flex;
+    flex-direction: column;
+    background: rgba(253, 253, 253, 0.637);
+    box-shadow: 0 0 8px rgba(112, 112, 112, 0.719);
+}
 
+label{
+    display: block; 
+    margin:6px 0 3px 0;
+    font-size:12px;
+    width:100%;
+    font-family: sans-serif;
+}
 
+input{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff9f;
+    padding: 5px;
+    box-shadow: 0;
+    text-shadow: 0;
+}
+
+#userFeatures{
+    margin-top:8px;
+}
+
+#userStyle, #userFeatures, #userPackage, #userBagless, #userBagmore, #userGlasses, #userPaymentMethod, #userPlan, #userAge{
+    border:1px solid #525252;
+    padding:0px 2px;
+}
+
+form h6{
+    margin: 7px 0 15px 0;
+    font-size:9px;
+    font-weight: 100;
+    padding-top:5px;
+    font-family: sans-serif;
+}
+
+form option{
+    font-size:14px;
+    width:100%;
+    margin: 0 0 0 7px;
+    border:1px solid #525252;
+    font-family: sans-serif;
+}
+
+form option:active{
+    background:#16163b ;
+    cursor:pointer;
+}
+
+form select{
+    font-size:12px;
+    padding: 5px 0;
+    width:100%;
+    border:1px solid #525252;
+    font-family: sans-serif;
+}
+input[type="checkbox"] {
+    width: 10px;
+    height: 10px;
+    margin: 0 15px 0 0;
+}
+
+#userFeatures{
+    display: grid;
+    grid-template-columns: 20fr 20fr;
+    background: #ffffff9f;
+    padding: 10px 7px;
+    border-radius: 15px;
+}
+#userFeatures label{
+    font-weight: normal;
+    margin-top: 0;
+    padding:2px 0px;
+    font-size: 10px;
+    display:flex;
+    align-items: center;
+}
+#userFeatures label div{
+    width:20px;
+    height:10px;
+}
+#userfeatures input{
+    padding-right:10px !important;
+    background: #16163b;
+    width:10px;
+    height:10px;
+}
+
+button{
+    padding: 2px 10px;
+    background: #0B325B !important;
+    color: white;
+    width:fit-content;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+button:active{
+    background: #07203a;
+}
+
+button:hover{
+    background: #07203a;
+}
+
+.tos{
+    display:flex;
+    align-items: center;
+    padding-top:5px;
+}
+
+.slider-container{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.slider-container input{
+    width:100%;
+    padding-top: 0px;
+}
+
+#socials h1{
+    font-size: 10vw;
+    animation: h11;
+    animation-timeline: scroll();
+    position: absolute;
+}
+
+#termsandconditions{
+    width:100vw;
+    height:100vh;
+}
+
+@keyframes h11{
+    0%{
+        transform: translateY(0vh)
+    }
+    45%{
+        transform: translateY(0vh)
+    }
+    62%{
+        transform: translateY(59vh)
+    }
+    70%{
+        transform: translateY(118vh)
+    }
+    90%{
+        transform: translateY(177vh)
+    }
+    100%{
+        transform: translateY(177vh)
+    }
+}
+
+#socials{
+    display:flex;
+    justify-content: center;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 10px;
+    background: #ffffff9f;
+    border:1px solid #525252;
+    border-radius: 10px;
+}
+
+input[type="range"]::-moz-range-track {
+    height: 20px;
+    background: #ffffff9f;
+    border:1px solid #525252;
+    border-radius: 10px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 10px;
+  background: #0B325B;
+  margin-top: -5px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 20px;
+  width: 10px;
+  background: #0B325B;
+  border-radius: 4px;
+  border: none;
+}
+
+.slider-container span{
+    width:100%;
+    height:10px;
+    text-align: center;
+    font-size:10px;
+}
+
+label h6{
+    padding: 0px 0 !important;
+    font-size: 9px;
+    font-weight: 100;
+    font-family: sans-serif;
+}
+
+.tos a{
+    text-decoration: underline;
+    color:#16163b;
+    padding:0 0 2px 3px;
+}
+
+@media only screen and (min-width: 500px) {
+    input[type=text], input[type=email]{
+        font-size:16px;
+        padding:3px 10px;
+    }
+
+    form{
+        width:75vw;
+        padding:60px 7vw;
+        border-radius: 50px;
+        display: inline-flex;
+        flex-direction: column;
+        position: absolute;
+    }
+
+    label{
+        display: block; 
+        margin:12px 0 3px 0;
+        font-size:18px;
+        width:100%;
+    }
+
+    input{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 5px;
+    }
+
+    #userFeatures{
+        margin-top:20px;
+    }
+
+    #userStyle, #userFeatures, #userPackage, #userBagless, #userBagmore, #userGlasses, #userPaymentMethod, #userPlan, #userAge{
+        padding:3px 10px;
+    }
+
+    form h6{
+        margin: 7px 0 15px 0;
+        font-size:14px;
+        padding-top:5px;
+    }
+
+    form option{
+        font-size:16px;
+        margin: 0 0 0 7px;
+        width: 50px !important;
+        overflow-x: hidden;
+    }
+
+    form option:active{
+        cursor:pointer;
+    }
+
+    form select{
+        font-size:16px;
+        padding: 5px 0;
+    }
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin: 0 15px 0 0;
+    }
+
+    #userFeatures{
+        display: grid;
+        grid-template-columns: 20fr 20fr;
+        padding: 15px 30px;
+        border-radius: 20px;
+    }
+    #userFeatures label{
+        font-weight: normal;
+        margin-top: 0;
+        padding:8px 0px;
+        font-size: 18px;
+        display:flex;
+        align-items: center;
+    }
+    #userFeatures label div{
+        width:20px;
+        height:10px;
+    }
+    #userfeatures input{
+        padding-right:10px !important;
+        width:10px;
+        height:10px;
+    }
+
+    button{
+        padding: 8px 17px;
+        width:fit-content;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 22px;
+        margin-top: 10px;
+    }
+
+    .tos{
+        display:flex;
+        align-items: center;
+        padding-top:10px;
+    }
+
+    .slider-container{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slider-container input{
+        width:100%;
+        height:20px;
+    }
+
+    .slider-container span{
+        width:100%;
+        height:20px;
+        text-align: center;
+        font-size:18px;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    input[type=text], input[type=email]{
+        font-size:15px;
+        padding:3px 10px;
+        width:277px;
+    }
+
+    form{
+        width:900px;
+        padding:auto;
+        border-radius: 50px;
+        display: grid;
+        grid-template-columns: 20fr 20fr;
+        position: absolute;
+    }
+
+    label{
+        display: block; 
+        margin:10px 0 3px 0;
+        font-size:18px;
+        width:100%;
+    }
+
+    input{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 5px;
+    }
+
+    #userFeatures{
+        margin-top:20px;
+    }
+
+    #userStyle, #userFeatures, #userPackage, #userBagless, #userBagmore, #userGlasses, #userPaymentMethod, #userPlan, #userAge{
+        padding:3px 10px;
+        width:277px !important;
+    }
+
+    form h6{
+        margin: 7px 0 15px 0;
+        font-size:13px;
+        padding: 5px 15px;
+        width:270px;
+    }
+
+    form option{
+        font-size:14px;
+        margin: 0 0 0 7px;
+    }
+
+    form option:active{
+        cursor:pointer;
+    }
+
+    form select{
+        font-size:15px;
+        padding: 5px 0;
+        width:300px;
+    }
+    input[type="checkbox"] {
+        width: 18px !important;
+        height: 18px !important;
+        content:"";
+        margin: 0 15px 0 0;
+    }
+
+    #userFeatures{
+        display: grid;
+        grid-template-columns: 20fr 20fr;
+        padding: 15px 30px;
+        border-radius: 20px;
+        width:450px;
+    }
+    #userFeatures label{
+        font-weight: normal;
+        margin-top: 0;
+        padding:10px 0px;
+        font-size: 15px;
+        display:flex;
+        align-items: center;
+    }
+    #userFeatures label div{
+        width:20px;
+        height:10px;
+    }
+    #userfeatures input{
+        padding-right:10px !important;
+        width:10px;
+        height:10px;
+    }
+
+    button{
+        padding: 12px 20px;
+        width:fit-content;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .tos{
+        display:flex;
+        align-items: center;
+        padding-top:10px;
+        font-size: 14px;
+    }
+
+    .slider-container{
+        width:300px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .slider-container input{
+        width:100%;
+        height:20px;
+    }
+
+    .slider-container span{
+        width:100%;
+        height:10px;
+        text-align: center;
+        font-size:20px;
+    }
+}
+
+/*************************************************************/
+
+.faq-container {
+    max-width: 600px;
+    width: 90vw;
+    overflow: hidden;
+}
+
+.faq-input {
+    display: none;
+}
+
+.faq-label {
+    display: block;
+    padding: calc((5px + 1vw + 3vh) * 0.3) calc((5px + 1vw + 3vh) * 0.4);
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s ease;
+    font-size: calc((5px + 1vw + 3vh) * 0.4);
+    font-family: sans-serif;
+}
+
+.faq-label:hover {
+    background-color: #f1f1f1;
+}
+
+.faq-content{
+    max-height: 0;
+    overflow: hidden;
+    transition: 0s ease-out, padding 0.7s;
+    background-color: white;
+    font-size: calc((5px + 1vw + 3vh) * 0.4);
+}
+
+.faq-content p{
+    text-decoration: none !important;
+    font-family: sans-serif;
+}
+
+.faq-input:checked + .faq-label + .faq-content {
+    max-height: 200px;
+    padding: calc((5px + 1vw + 3vh) * 0.3) calc((5px + 1vw + 3vh) * 0.4);
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-label::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    transform: translateX(calc(-5vw - 10px));
+    color: #888;
+}
+
+.faq-input:checked + .faq-label::after {
+    content: '-';
+}
+
+.content h2{
+    font-size:calc((5px + 1vw + 3vh) * 0.8);
+    padding-top: calc(5px + 1vw + 3vh);
+    padding-bottom:calc((5px + 1vw + 3vh) * 0.4);
+}
+
+#termsandconditions .content{
+    background:#87abd100;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    animation:colorss;
+    animation-timeline:scroll();
+}
+
+@keyframes colorss{
+    0%{
+        background:#87abd100;
+    }
+    90%{
+        background:#87abd100;
+    }
+    100%{
+        background:#87abd1;
+    }
+}
+
+.content{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: underline;
+    height:70vh;
+}
+
+.content a{
+    padding-bottom:10px;
+}
+
+.slihead{
+    width:13%;
+    transform: translateX(335%);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:2vh 0;
+    height:86vh;
+    background-color: #ffffff8c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.253);
+}
+
+.slihead div{
+    width:100%;
+    max-width:900px;
+}
+
+.slititle{
+    height: 10vh;
+}
+
+.slititle h1{
+    font-size: calc((5px + 2.5vw + 2.5vh));
+    text-decoration: underline;
+}
+
+.slistar{
+    height: 25vh;
+}
+
+.slimid{
+    height: 35vh;
+}
+.sliend{
+    height: 10vh;
+}
+
+.sliend h3{
+    font-size: calc((5px + 2.5vw + 2.5vh) * 1.05);
+    font-family: sans-serif;
+}
+
+#packages{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.carousel-container {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-track {
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    position: relative;
+}
+
+.slide {
+    min-width: 100%;
+    width: 80vw !important;
+    text-align: center;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: #07203a3d;
+}
+
+.prev { left: 2vw; }
+.next { right: 2vw; }
+.nav-btn:hover { background: rgba(0,0,0,0.8); }
+
+.dots-container {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #94bfff;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background:#333;
+}
+
+.slide ul{
+    margin: 0vh 4.5vh;
+}
+
+.slide li{
+    text-align: left;
+    padding: 0.3vh 0;
+    font-family: sans-serif;
+    font-size: calc(( 5px + 1vw + 4vh) * 0.35);
+}
+
+.slide h2{
+    text-align: left;
+    margin: 1vh 4vh;
+    font-size: calc(( 5px + 1vw + 4vh) * 0.6);
+}
+
+/******************************************************/
+
+body{
+    max-height:600vh !important;
+    height:600vh !important;
+    max-width:600vw !important;
 }

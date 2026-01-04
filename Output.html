@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Database View</title>
+    <link rel="stylesheet" href="output.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <h2>Data</h2>
+        <div id="card-container" class="card-grid"></div>
+    </div>
+
+    <script>
+        function show() {
+            const data = JSON.parse(localStorage.getItem('myFursuitData')) || [];
+            const container = document.getElementById('card-container');
+            container.innerHTML = '';
+
+            if (data.length === 0) {
+                container.innerHTML = '<p>No entries found.</p>';
+                return;
+            }
+
+            data.forEach((item, index) => {
+                // Create the card element
+                const card = document.createElement('div');
+                card.className = 'card';
+                const timestamp = item.date ? `${item.date} | ${item.time}`: "No timestamp";
+                // Construct the card content
+                card.innerHTML = `
+                    <div class="card-header">
+                        <div style="display:flex; align-items:center; gap:10px;">
+                            <span style="background:rgba(255,255,255,0.2); padding:2px 6px; border-radius:4px; font-size:0.8rem;">#${index + 1}</span>
+                            <h3>${item.name}</h3>
+                        </div>
+                        <span class="badge">${item.style}</span>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Platform:</strong> ${item.p1} / ${item.p2}</p>
+                        <p><strong>Email:</strong> ${item.email}</p>
+                        <p><strong>Adult:</strong> ${item.age} | <strong>Country:</strong> ${item.country}</p>
+                        <hr>
+                        <p><strong>Character:</strong> ${item.char}</p>
+                        <p><strong>Features:</strong> ${item.feat}</p>
+                        <p><strong>Exp:</strong> ${item.exp} | <strong>Package:</strong> ${item.pack}</p>
+                        <p><strong>Bags:</strong> S: ${item.bagS} / L: ${item.bagL}</p>
+                        <p><strong>Measurements:</strong> M1: ${item.m1}, M2: ${item.m2}</p>
+                        <p><strong>Glasses:</strong> ${item.glasses}</p>
+                        <p><strong>Payment Method:</strong> ${item.pay} | <strong>Plan:</strong> ${item.plan}</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="del-btn" onclick="deleteEntry(${index})">Delete Entry</button>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function deleteEntry(index) {
+            if(confirm("Are you sure you want to delete this entry?")) {
+                const data = JSON.parse(localStorage.getItem('myFursuitData')) || [];
+                data.splice(index, 1);
+                localStorage.setItem('myFursuitData', JSON.stringify(data));
+                show();
+            }
+        }
+
+        show();
+    </script>
+</body>
+</html>
