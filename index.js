@@ -69,3 +69,14 @@ function currentSlide(index) {
     currentIndex = index;
     updateCarousel();
 }
+
+window.addEventListener('load', () => {
+    // requestAnimationFrame ensures the layout is fully rendered before moving the view
+    requestAnimationFrame(() => {
+      const maxScroll = document.documentElement.scrollWidth - window.innerWidth;
+      window.scrollTo({
+        left: maxScroll,
+        behavior: 'instant' // Snaps it instantly without smooth-scrolling animation
+      });
+    });
+  });
